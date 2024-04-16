@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Competition Rounds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://as1.ftcdn.net/v2/jpg/03/45/97/36/1000_F_345973621_sMifpCogXNoIDjmXlbLwx1QZA5ZmQVl8.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            text-align: center;
+        }
+        #startRoundBtn {
+            position: absolute;
+            bottom: 50px; /* Adjust the distance from the bottom */
+            left: 50%; /* Center the button horizontally */
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #startRoundBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="startRoundBtn" onclick="startRound(1)">Start Round 1</button>
+
+    <script>
+        function startRound(roundNumber) {
+            switch(roundNumber) {
+                case 1:
+                    window.location.href = "round1login";
+                    // Add your logic for starting Round 1 here
+                    break;
+                default:
+                    alert("Invalid round number");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

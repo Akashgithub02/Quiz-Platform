@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Competition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://t4.ftcdn.net/jpg/03/45/88/07/360_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: black;
+            flex-direction: column; /* Display flex items vertically */
+        }
+        h1 {
+            font-size: 48px; /* Increased font size for the heading */
+            font-family: 'Horror Font', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            color: #FFD700; /* Set the color to gold */
+            margin-bottom: 30px; /* Add some space below the text */
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 24px; /* Increased font size for the button */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to <span style="font-family: 'Horror Font', cursive;">Abhyuday 8.0</span></h1>
+    <form action="/rounds" method="get">
+        <input type="submit" value="Enter the competition">
+    </form>
+</body>
+</html>

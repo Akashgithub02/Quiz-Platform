@@ -1,0 +1,107 @@
+{
+    "questions": [
+      {
+        "question": "Who is known as father of Internet?",
+        "options": ["Alan perlis", "Jeab E. Sammet", "Steve Lawrence", "Vint Cerf"],
+        "solution": "Vint Cerf"
+      },
+      {
+        "question": "Which one is first high level programming language?",
+        "options": ["C", "FORTRAN", "COBOL", "C++"],
+        "solution": "FORTRAN"
+      },
+      {
+        "question": "One Terabyte(1TB) is equal to",
+        "options": ["1024GB", "1028GB", "1012GB", "1000GB"],
+        "solution": "1024GB"
+      },
+      {
+        "question": "Which one programming language is exclusively used for a Artificial Intelligence?",
+        "options": ["C", "Java", "J2EE", "Prolog"],
+        "solution": "Prolog"
+      },
+      {
+        "question": "Computer hard disk was first introduced in 1956 by",
+        "options": ["Dell", "Microsoft", "Apple", "IBM"],
+        "solution": "IBM"
+      },
+      {
+        "question": "What is the binary value of 'A'?",
+        "options": ["01000001", "01000100", "01100001", "11000001"],
+        "solution": "01000001"
+      },
+      {
+        "question": "What is the fullform of PDF?",
+        "options": ["Printed Document Format", "Public Document Format", "Portable Document Format", "Published Document Format"],
+        "solution": "Portable Document Format"
+      },
+      {
+        "question": "What does the letter 'S' stands for in the web terminalogy 'HTTPS'?",
+        "options": ["Safe", "Secure", "Short", "Shorter"],
+        "solution": "Secure"
+      },
+      {
+        "question": "Which one IP address cannot be assign to Computer System in a network?",
+        "options": ["192.168.1.1", "192.1.1.27", "127.0.0.1", "None of these"],
+        "solution": "127.0.0.1"
+      },
+      {
+        "question": "In which of the LAN topology, all devices are connected to a central hub?",
+        "options": ["Star topology", "Bus topology", "Ring topology", "Tree topology"],
+        "solution": "Star topology"
+      },
+      {
+        "question": "In which language the UNIX operating system has been prepared?",
+        "options": ["Basic", "C", "Pascal", "Prolog"],
+        "solution": "C"
+      },
+      {
+        "question": "Which device is used for controlling network security and access rules?",
+        "options": ["Modem", "Switch", "Firewalls", "Routers"],
+        "solution": "Firewalls"
+      },
+      {
+        "question": "Which of the following is not a SQL command?",
+        "options": ["DELETE", "ORDER BY", "SELECT", "WHERE"],
+        "solution": "DELETE"
+      },
+      {
+        "question": "Compilers,Editors Software comes under which type of Software?",
+        "options": ["System Software", "Application Software", "Scientific Software", "None of these"],
+        "solution": "System Software"
+      },
+      {
+        "question": "Which technology is used to record cryptocurrency transactions?",
+        "options": ["Mining", "Digital Wallet", "Blockchain Technology", "Token"],
+        "solution": "Blockchain Technology"
+      },
+      {
+        "question": "The Process of starting or restarting a computer is called",
+        "options": ["Start up point", "Booting", "Connecting", "Resetting"],
+        "solution": "Booting"
+      },
+      {
+        "question": "The largest key on the keyboard is",
+        "options": ["shift", "Escape", "space bar", "tab"],
+        "solution": "space bar"
+      },
+      {
+        "question": "'.MOV' extension refers usually to what kind of file?",
+        "options": ["Image file", "Animation/movie file", "Audio file", "MS office document"],
+        "solution": "Garbage value"
+      },
+      {
+        "question":"The purpose of the primary key in a database is to- ",
+        "options":["unlock the database","provide a map of the data","uniquely identify a record","establish constraints on database operations"],
+        "solution":"provide a map of the data"
+      },
+      {
+        "question":"Which of the following language support garbage collection ?",
+        "options":["Java","C++","C","small talk"],
+        "solution":["Java"]
+
+      }
+    
+    ]
+  }
+  

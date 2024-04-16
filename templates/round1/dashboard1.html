@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Round 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t4.ftcdn.net/jpg/02/68/80/71/360_F_268807166_oPVMMlJcxy4OjBDkl9JPxqfJeMC98yNm.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            color: #fff;
+        }
+        h1, h3, .team-name, .instructions, .timer, .start-contest, .checkbox-container {
+            position: absolute;
+            text-align: center;
+        }
+        h1, h3, .team-name {
+            color: #008080; /* Change font color of Welcome message, good luck message, and team name to teal */
+        }
+        h1 {
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 20px; /* Add margin bottom to create space */
+        }
+        h3 {
+            top: 80px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .team-name {
+            top: 140px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .instructions {
+            top: 200px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: left;
+            width: 90%;
+            margin: auto;
+        }
+        .instructions p {
+            margin-bottom: 10px;
+        }
+        .instructions strong {
+            color: red; /* Change color of Instructions: to red */
+        }
+        .timer {
+            top: 380px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+        }
+        .start-contest {
+            top: 440px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #4B0082; /* Change background color of Start Quiz button to a shade of indigo */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            color: #fff; /* Change text color of Start Quiz button to white */
+        }
+        .start-contest:hover {
+            background-color: #800080; /* Change background color of Start Quiz button on hover */
+        }
+        .checkbox-container {
+            top: 500px; /* Adjust top position for space */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Round 1</h1>
+    <h3>We wish you the best of luck!</h3>
+    <div class="team-name">{{ team_name }}</div>
+    
+    <div class="instructions">
+        <p><strong style="color: red;">Instructions:</strong></p> <!-- Add inline style to change color to red -->
+        <p>1. You will have a limited time to complete the quiz.</p>
+        <p>2. Read each question carefully and select the correct answer.</p>
+        <p>3. Once you start the quiz, make sure to complete it without refreshing the page.</p>
+        <p>4. Click the "Start Quiz" button below to begin.</p>
+    </div>
+
+    <!-- Timer to show when the test starts -->
+    <div class="timer" id="timer"></div>
+
+    <div class="checkbox-container">
+        <!-- Checkbox for terms and conditions -->
+        <input type="checkbox" id="agree-checkbox"> I have read and understood the instructions.
+    </div>
+    
+    <!-- Button to start the quiz -->
+    <button class="start-contest" onclick="startQuiz()">Start Quiz</button>
+
+    <script>
+        // Function to start the quiz
+        function startQuiz() {
+            // Check if the checkbox is checked
+            if (document.getElementById('agree-checkbox').checked) {
+                // Redirect to the quiz page
+                window.location.href = '/quiz';
+            } else {
+                // Display a popup to agree to terms and conditions
+                alert('Please read and understand the instructions before starting the quiz.');
+            }
+        }
+        document.querySelector(".start-contest").disabled = true;
+
+        // Calculate and display the time remaining until the test starts
+        function calculateTimeRemaining() {
+            // Get the current time and the start time of the test
+            var startTime = new Date("{{ start_time }}");
+            var currentTime = new Date();
+            
+            // Calculate the time difference in milliseconds
+            var timeDifference = startTime - currentTime;
+            
+            // If the time is up, enable the Start Quiz button
+            if (timeDifference <= 0) {
+                document.getElementById("timer").style.color = "green";
+                document.getElementById("timer").innerHTML = "Test has started!";
+                document.querySelector(".start-contest").disabled = false;
+                // Optionally, you can redirect to the quiz page here as well
+                return; // Stop further execution
+            }
+            
+            // Calculate the minutes and seconds remaining
+            var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+            // Display the time remaining
+            document.getElementById("timer").innerHTML = "Test starts in " + minutes + " minutes and " + seconds + " seconds";
+        }
+    
+        // Call the function to start calculating the time remaining
+        calculateTimeRemaining();
+    
+        // Call the function to calculate and display the time remaining every second
+        setInterval(calculateTimeRemaining, 1000);
+    </script>
+</body>
+</html>
