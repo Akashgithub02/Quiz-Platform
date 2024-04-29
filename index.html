@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Disease Detection</title>
+    <!-- Link to Bootstrap CDN for icons and additional styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4557a0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Add background image */
+            background-image: url('https://example.com/path/to/your/image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #42b2d7;
+            font-size: 3rem; /* Increased font size */
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 40%;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .custom-file-upload {
+            background-color: #45a049; /* Green color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1;
+            margin-right: 10px; /* Added margin for spacing */
+        }
+
+        .custom-file-upload:hover {
+            background-color: #3b863f; /* Darker green on hover */
+        }
+
+        .btn-predict {
+            background-color: #45a049; /* Green color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1;
+        }
+
+        .btn-predict:hover {
+            background-color: #3b863f; /* Darker green on hover */
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Added margin to separate from the input */
+        }
+
+        .info-text {
+            color: #d42121;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #img{
+    vertical-align: middle;
+    height: 300px;
+    width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Dental Disease Detection</h1>
+        <hr>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="btn-container">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="bi bi-cloud-upload"></i> Choose File
+                </label>
+                <input type="file" name="file" id="file-upload" accept=".jpg, .jpeg, .png" required>
+                <button type="submit" class="btn btn-success btn-predict"><i class="bi bi-upload"></i> Predict</button>
+            </div>
+        </form>
+        <p class="info-text">
+            Upload an image to detect dental diseases. Our advanced model will analyze the image and provide you with the prediction results.
+        </p>
+        <img src="/static/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite.jpg" alt="Dental Implants Surgery" id="img">
+    </div>
+
+    <!-- Bootstrap Icons Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

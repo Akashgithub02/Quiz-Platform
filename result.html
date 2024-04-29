@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Placeholder background image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            text-align: center;
+        }
+
+        .container img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px; /* Added margin to separate image from text */
+        }
+
+        .container h1 {
+            margin-top: 20px;
+            font-size: 28px; /* Increased font size for the title */
+            color: #333;
+        }
+
+        .container p {
+            margin: 10px 0;
+            color: #666;
+            font-size: 18px; /* Increased font size for the paragraph text */
+        }
+
+        .class-label {
+            font-weight: bold;
+            color: #007bff; /* Blue color */
+            font-size: 22px; /* Increased font size for class label */
+        }
+
+        .classification-value {
+            font-size: 24px; /* Increased font size for classification value */
+            font-weight: bold;
+            color: #4caf50; /* Green color */
+        }
+
+        .container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('uploaded_file', filename='temp_image.jpg') }}" alt="Predicted Image">
+        <h1>Classification Result</h1>
+        <p><span class="class-label">Class:</span> <span class="classification-value">{{ class_name }}</span></p>
+        <p><span class="class-label">Confidence:</span> <span class="classification-value">{{ confidence }}%</span></p>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
